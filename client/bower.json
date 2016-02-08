@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "authors": [],
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "client/lib"
-  ],
   "dependencies": {
     "angular": "~1.2.18",
     "angular-route": "~1.2.18",
