@@ -18,6 +18,12 @@ app.use(express.static(__dirname+'/../client'));
 //   res.send('hello world');
 // });
 
+app.get('/favicon.ico', function(req,res) {
+   r.writeHead(200, {'Content-Type': 'image/x-icon'} );
+    r.end();
+    console.log('favicon requested');
+    return;
+});
 
 
 app.set('port', (process.env.PORT || 8000));
