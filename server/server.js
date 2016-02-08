@@ -15,16 +15,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname+'/../client'));
 app.use(express.static(__dirname+'/../client/bower_components'));
 
-app.get('/', function(req,res) {
-  res.end('hello world');
-});
+// app.get('/', function(req,res) {
+//   res.end('hello world');
+// });
 
-app.get('/favicon.ico', function(req,res) {
-   res.writeHead(200, {'Content-Type': 'image/x-icon'} );
-    res.end();
-    console.log('favicon requested');
-    return;
-});
+// app.get('/favicon.ico', function(req,res) {
+//    res.writeHead(200, {'Content-Type': 'image/x-icon'} );
+//     res.end();
+//     console.log('favicon requested');
+//     return;
+// });
 
 
 app.set('port', (process.env.PORT || 8000));
