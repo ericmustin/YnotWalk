@@ -1,5 +1,6 @@
 angular.module('ericMVP', [
   'ericMVP.home',
+  'ericMVP.homeFactory',
   'ui.router'])
 
 .config(function ( $httpProvider, $stateProvider, $urlRouterProvider) {

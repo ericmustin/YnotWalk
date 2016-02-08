@@ -1,6 +1,13 @@
 <div id='container'>
   <!-- Your html here -->
-  <h1>Home Page</h1>
+  <h1>Delivery Cost</h1>
+
+  <div ui-view></div>
+  <h5> {{ postmateData.fee / 100 | currency : fractionsize}} </h5>
+
+
+
+
 <!--   <a href="#/shorten">Go to Shorten</a>
   <a ng-click='signOut()'> Log Out </a>
   <h3> Search for a Link </h3>

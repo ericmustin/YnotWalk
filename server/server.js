@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 // var cheerio = require('cheerio');
 var http = require('http');
-// var helpers = require('./helpers.js');
+var helpers = require('./helpers.js');
 
 var app = express();
 
@@ -26,6 +26,15 @@ app.use(express.static(__dirname+'/../client/bower_components'));
 //     return;
 // });
 
+app.get('/postmates' , function(req,res) {
+
+helpers.getData(function(data) {
+  console.log("body is in CallBack server.js: ", data);
+  res.send({data:data});
+  
+});
+
+});
 
 app.set('port', (process.env.PORT || 8000));
 
