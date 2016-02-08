@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='ericMVP'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Eric MVP</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <h1>Eric MVP</h1>
+    <a href="#/home"> GoTO HomePage</a>
+    <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
+    <div ui-view></div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/home/home.js"></script>
+
+   <!--  // <script src="app/auth/auth.js"></script>
+    // <script src="app/links/links.js"></script>
+    // <script src="app/shorten/shorten.js"></script>
+    // <script src="app/services/services.js"></script>-->
+     <script src="app/app.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Eric-MVP",
+  "version": "0.0.0",
+  "description": "MVP Project",
+  "author": "Eric Mustin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.5.7",
+    "clone-stats": "0.0.1",
+    "expect.js": "^0.3.1",
+    "jshint-stylish": "^0.2.0"
+    },
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "~4.0.0",
+    "express-partials": "~0.2.0",
+    "express-session": "^1.7.2",
+    "request": "^2.36.0"
+  }
+}
