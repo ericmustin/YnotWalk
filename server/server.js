@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname+'/../client'));
 
-// app.get('/', function(req,res) {
-//   res.send('hello world');
-// });
+app.get('/', function(req,res) {
+  res.send('hello world');
+});
 
 app.get('/favicon.ico', function(req,res) {
    r.writeHead(200, {'Content-Type': 'image/x-icon'} );
