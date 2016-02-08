@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname+'/../client'));
+app.use(express.static(__dirname+'/../client/bower_components'));
 
 app.get('/', function(req,res) {
   res.end('hello world');
