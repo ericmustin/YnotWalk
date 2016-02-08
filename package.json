@@ -4,9 +4,6 @@
   "description": "MVP Project",
   "author": "Eric Mustin",
   "license": "ISC",
-  "dependencies": {
-    "express": "~4.0.0",
-    },
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "clone-stats": "0.0.1",
