@@ -2,7 +2,7 @@ var express = require('express');
 var partials = require('express-partials');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var cheerio = require('cheerio');
+// var cheerio = require('cheerio');
 var http = require('http');
 // var helpers = require('./helpers.js');
 
