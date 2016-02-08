@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cheerio = require('cheerio');
 var http = require('http');
+var helpers = require('./helpers.js');
 
 var app = express();
 
