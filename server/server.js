@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cheerio = require('cheerio');
 var http = require('http');
-var helpers = require('./helpers.js');
+// var helpers = require('./helpers.js');
 
 var app = express();
 
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname+'/../client'));
 
 app.get('/', function(req,res) {
-  res.send('hello world');
+  res.end('hello world');
 });
 
 app.get('/favicon.ico', function(req,res) {
@@ -29,10 +29,6 @@ app.get('/favicon.ico', function(req,res) {
 app.set('port', (process.env.PORT || 8000));
 
 module.exports = app;
-
-// app.listen(app.get('port'), function() {
-//   console.log('server for Node app is running');
-// });
 
 
 // Utility function that downloads a URL and invokes
