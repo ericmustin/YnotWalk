@@ -25,7 +25,7 @@ var shelters =[
   ["514 South Van Ness Avenue San Francisco, CA 94110 ","(415) 553-6284","Tenderloin Housing Clinic "],
   ["2791 16th Street San Francisco, CA 94103 ","(415) 503-1096","Tenderloin Housing Clinic Inc "]
 ];
-
+ 
 module.exports = {
   shelters = shelters
 };
