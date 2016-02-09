@@ -5,7 +5,7 @@ angular.module('ericMVP.newYork', [])
 
   $scope.postmateData;
   $scope.startAddress;
-  $scope.confirmation = 'Click Me to Schedule Your Delivery!'
+  $scope.confirmation = 'Click to Schedule Your Delivery!'
 
   
   $scope.sheltersObj = DataNewYork.sheltersObj;
@@ -26,7 +26,8 @@ angular.module('ericMVP.newYork', [])
   // };
 
   $scope.sendFunction = function() {
-    DataNewYork.postmatesController($scope.startAddress);
+    var addOn = ", New York, NY"
+    DataNewYork.postmatesController($scope.startAddress+addOn);
     $scope.sheltersObj = DataNewYork.sheltersObj;
   };
 

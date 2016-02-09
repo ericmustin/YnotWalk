@@ -11,12 +11,14 @@
     <script src="lib/angular-order-object-by/src/ng-order-object-by.js"></script>
     <script src="/lib/angular-animate/angular-animate.js"></script>
     <script src="/lib/ng-fx/dist/ng-fx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"> </script>
   </head>
   <body>
     <h1>Postmates To The People</h1>
     <h3> Get Giving. Get Going. </h3>
     <p> We help city residents price and schedule deliveries to those in need. Leverage a Postmates courier to deliver what you can, when you can. <br>Simply type in your home address to get started.
     <br><div> Find the closest shelter in <a href="#/home"> San Francisco</a> or <a href="#/newYork"> New York </a> </div>
+    <br> <a href="#/guide"> Learn more about what to give </a>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
     <div ui-view></div>
 
@@ -24,6 +26,7 @@
     <script src="app/home/home.js"></script>
     <script src="app/home/newYork.js"></script>
      <script src="app/app.js"></script> 
+     <script src="app/home/guide.js"></script>
      <script src="app/home/homeFactory.js"></script>
      <script src="app/home/newYorkFactory.js"></script>
   </body>

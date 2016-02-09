@@ -5,8 +5,8 @@ angular.module('ericMVP.home', [])
 
   $scope.postmateData;
   $scope.startAddress;
-  $scope.confirmation = 'Click Me to Schedule Your Delivery!'
-  
+  $scope.confirmation = 'Click to Schedule Your Delivery!'
+
 $scope.sheltersObj = Data.sheltersObj;
 
 //This Send delivery function allows users to actually schedule a delivery
@@ -23,9 +23,10 @@ $scope.sheltersObj = Data.sheltersObj;
   //   Data.delivery(obj);
   //   $scope.confirmation = Data.response;
   // };
-
+ 
   $scope.sendFunction = function() {
-    Data.postmatesController($scope.startAddress);
+    var addOn = ", San Francisco, CA"
+    Data.postmatesController($scope.startAddress+addOn);
     // Data.postmates($scope.startAddress,$scope.sheltersObj[key].address).then(function(info) {
     // $scope.sheltersObj[key].details = JSON.parse(info.data.data);
     // $scope.sheltersObj[key].fee = $scope.sheltersObj[key].details.fee;
