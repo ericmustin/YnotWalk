@@ -1,0 +1,37 @@
+<div id='container'>
+  <!-- Your html here -->
+  
+  <form name='addressData' ng-submit='sendFunction()'>
+
+  <input type='text' size="50" class='item' placeholder='(Ex: 107 East 10th Street, New York, NY)' ng-model='startAddress'>
+  <button> Calculate Cost </button>
+  <h2>Estimated Delivery Cost</h2>
+
+
+  <div ui-view></div>
+  <div ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'" class="fx-rotate-up-left fx-stagger-245">
+  <h4> {{ shelter.shelterName }}  </h4>
+  <h6> {{ shelter.address }} </h6>
+  <a> {{ shelter.phoneNumber }} </a>
+  <h7> {{ shelter.details /100 | currency  }} </h7>
+  </div>
+
+
+<!--   <a href="#/shorten">Go to Shorten</a>
+  <a ng-click='signOut()'> Log Out </a>
+  <h3> Search for a Link </h3>
+  <input type="text" class="item" placeholder="" ng-model="search">
+  <ul class="nav nav-pills nav-stacked">
+  <div class='link'>
+  <div ui-view></div>
+  <li class="fx-fade-down" ng-repeat="data in datas | filter:search">
+
+    <a class="link title"> <h5>{{ data.title }}</h5> </a> 
+    <a class="link original"> {{ data.url }} </a> 
+    <a href={{'/api/links/'+data.code}}>{{data.base_url+'/api/links/'+data.code}} </a> 
+    <a class="link visits"> Visits: {{ data.visits }}</a>
+  </li>
+  </div>
+  </ul> -->
+
+</div>

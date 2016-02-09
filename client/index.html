@@ -13,15 +13,18 @@
     <script src="/lib/ng-fx/dist/ng-fx.min.js"></script>
   </head>
   <body>
-    <h1>Postmates for the People</h1>
-    <p> Get pricing and schedule deliveries to those in need.  Postmates For The People helps San Francisco residents deliver what they can, when they can. <br>Simply type in your home address and get giving.
-    <br><a href="#/home"> Find the Closest Shelter</a>
+    <h1>Postmates To The People</h1>
+    <h3> Get Giving. Get Going. </h3>
+    <p> We help city residents price and schedule deliveries to those in need. Deliver what you can, when you can. <br>Simply type in your home address to get started.
+    <br><div> Find the closest shelter in <a href="#/home"> San Francisco</a> or <a href="#/newYork"> New York </a> </div>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
     <div ui-view></div>
 
 
     <script src="app/home/home.js"></script>
+    <script src="app/home/newYork.js"></script>
      <script src="app/app.js"></script> 
      <script src="app/home/homeFactory.js"></script>
+     <script src="app/home/newYorkFactory.js"></script>
   </body>
 </html>

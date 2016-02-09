@@ -1,6 +1,8 @@
 angular.module('ericMVP', [
   'ericMVP.home',
   'ericMVP.homeFactory',
+  'ericMVP.newYork',
+  'ericMVP.newYorkFactory',
   'ngOrderObjectBy',
   'ng-fx',
   'ngAnimate',
@@ -15,6 +17,12 @@ angular.module('ericMVP', [
       templateUrl: 'app/home/home.html',
       url: '/home',
       controller: 'HomeController'
+    })
+
+    .state('newYork', {
+      templateUrl: 'app/home/newYork.html',
+      url: '/newYork',
+      controller: 'newYorkController'
     })
 
 })
