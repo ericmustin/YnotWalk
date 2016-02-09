@@ -6,14 +6,16 @@
   <input type='text' size="50" class='item' placeholder='(Ex: 123 Washington Street, San Francisco, CA)' ng-model='startAddress'>
   <button> Calculate Cost </button>
   <h2>Estimated Delivery Cost</h2>
+    <p> Please Note: Scheduling a delivery is currently disabled while we continue testing. Thank you for your patience and support.</p>
 
 
   <div ui-view></div>
-  <div ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'" class="fx-rotate-up-left fx-stagger-245">
+  <div ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'" class="fx-rotate-up-left fx-stagger-245" ng-click="sendDelivery(shelter.shelterName, shelter.address, shelter.phoneNumber)">
   <h4> {{ shelter.shelterName }}  </h4>
   <h6> {{ shelter.address }} </h6>
   <a> {{ shelter.phoneNumber }} </a>
   <h7> {{ shelter.details /100 | currency  }} </h7>
+  <a> {{ confirmation }} </a>
   </div>
 
 
