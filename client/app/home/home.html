@@ -1,11 +1,18 @@
 <div id='container'>
   <!-- Your html here -->
-  <h1>Delivery Cost</h1>
+  <h1>Estimated Delivery Cost</h1>
+  <form name='addressData' ng-submit='sendFunction()'>
+
+  <input type='text' size="50" class='item' placeholder='Home Address (Ex:1950 Washington Street, San Francisco, CA)' ng-model='startAddress'>
+  <button> Calculate Cost </button>
+
 
   <div ui-view></div>
-  <h5> {{ postmateData.fee / 100 | currency : fractionsize}} </h5>
-
-
+  <li class="fx-fade-down" ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'">
+  <h6> {{ shelter.shelterName }}  </h6>
+  <h7> {{ shelter.phoneNumber }} </h7>
+  <h7> {{ shelter.details /100 | currency  }} </h7>
+  </li>
 
 
 <!--   <a href="#/shorten">Go to Shorten</a>

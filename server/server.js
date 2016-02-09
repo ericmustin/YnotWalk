@@ -26,12 +26,16 @@ app.use(express.static(__dirname+'/../client/bower_components'));
 //     return;
 // });
 
-app.get('/postmates' , function(req,res) {
+app.post('/postmates' , function(req,res) {
 
-helpers.getData(function(data) {
-  console.log("body is in CallBack server.js: ", data);
-  res.send({data:data});
-  
+
+
+helpers.getData(req,function(data) {
+  console.log("request body looks like: ", req.body);
+  res.send({
+    data:data,
+    end: req.body.endAddress
+  });
 });
 
 });
@@ -57,4 +61,4 @@ module.exports = app;
 //   });
 // }
 
-// download('http://sfbay.craigslist.org/search/zip');
+// download('http://www.homelessshelterdirectory.org/cgi-bin/id/cityfoodbanks.cgi?city=San%20Francisco&state=CA');

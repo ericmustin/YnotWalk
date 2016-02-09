@@ -1,6 +1,7 @@
 angular.module('ericMVP', [
   'ericMVP.home',
   'ericMVP.homeFactory',
+  'ngOrderObjectBy',
   'ui.router'])
 
 .config(function ( $httpProvider, $stateProvider, $urlRouterProvider) {
@@ -15,6 +16,8 @@ angular.module('ericMVP', [
     })
 
 })
+
+
 
 .run(function ($rootScope, $location) {
 

@@ -4,10 +4,20 @@ angular.module('ericMVP.home', [])
   console.log('HomeController is working');
 
   $scope.postmateData;
-
-  Data.postmates().then(function(info) {
-    $scope.postmateData = JSON.parse(info.data.data);
-    console.log('Home Controller data is: ', $scope.postmateData);
-  });
+  $scope.startAddress;
   
+$scope.sheltersObj = Data.sheltersObj;
+
+  $scope.sendFunction = function() {
+    Data.postmatesController($scope.startAddress);
+    // Data.postmates($scope.startAddress,$scope.sheltersObj[key].address).then(function(info) {
+    // $scope.sheltersObj[key].details = JSON.parse(info.data.data);
+    // $scope.sheltersObj[key].fee = $scope.sheltersObj[key].details.fee;
+    // console.log($scope.sheltersObj[key]);
+    // });
+  // }
+  };
+
+  // $scope.sendFunction();
+
 });

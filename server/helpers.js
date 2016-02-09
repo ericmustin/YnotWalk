@@ -2,7 +2,10 @@ var request = require('request');
 var http = require('http');
 var apiKey = require('./ApiKey.js');
 
-var getData = function(cb) {
+var getData = function(req,cb) {
+  console.log(req.body);
+  var startAddress = req.body.startAddress;
+  var endAddress = req.body.endAddress;
   var headers = {
     'Authorization': apiKey.auth,
   };
@@ -12,13 +15,11 @@ var getData = function(cb) {
     method: 'POST',
     headers: headers,
     form:  {
-      'pickup_address': '1950 Washington Street, San Francisco, CA 94105',
-      'dropoff_address': '611 Mission Street, San Francisco, CA 94105'
+      'pickup_address': startAddress,
+      'dropoff_address': endAddress
     }
   };
-  request.post(options, function(err, response,body) {
-      console.log("body is in post: ", body);
-      
+  request.post(options, function(err, response,body) {      
       cb(body)
     });
 };
