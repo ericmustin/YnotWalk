@@ -4,25 +4,23 @@
     <meta charset="utf-8" />
     <title>Eric MVP</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
         <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/angular-order-object-by/src/ng-order-object-by.js"></script>
+    <script src="/lib/angular-animate/angular-animate.js"></script>
+    <script src="/lib/ng-fx/dist/ng-fx.min.js"></script>
   </head>
   <body>
     <h1>Postmates for the People</h1>
-    <a href="#/home"> Find the Closest Shelter</a>
+    <p> Schedule deliveries to those in need.  Postmates for the People helps San Francisco residents deliver what they can, when they can, to those in need. <br>Simply type in your home address and get giving.
+    <br><a href="#/home"> Find the Closest Shelter</a>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
     <div ui-view></div>
 
 
     <script src="app/home/home.js"></script>
-
-   <!--  // <script src="app/auth/auth.js"></script>
-    // <script src="app/links/links.js"></script>
-    // <script src="app/shorten/shorten.js"></script>
-    // <script src="app/services/services.js"></script>-->
      <script src="app/app.js"></script> 
      <script src="app/home/homeFactory.js"></script>
   </body>

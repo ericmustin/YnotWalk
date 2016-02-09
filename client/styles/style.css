@@ -2,4 +2,10 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  background: url('./shoes.jpg') no-repeat center center fixed;
+  text-align: center;
+  min-height:100%;
+  min-width: 100%;
+
+  background-attachment: fixed;
 }

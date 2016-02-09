@@ -1,18 +1,20 @@
 <div id='container'>
   <!-- Your html here -->
-  <h1>Estimated Delivery Cost</h1>
+  
   <form name='addressData' ng-submit='sendFunction()'>
 
-  <input type='text' size="50" class='item' placeholder='Home Address (Ex:1950 Washington Street, San Francisco, CA)' ng-model='startAddress'>
+  <input type='text' size="50" class='item' placeholder='(Ex: 123 Washington Street, San Francisco, CA)' ng-model='startAddress'>
   <button> Calculate Cost </button>
+  <h2>Estimated Delivery Cost</h2>
 
 
   <div ui-view></div>
-  <li class="fx-fade-down" ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'">
-  <h6> {{ shelter.shelterName }}  </h6>
-  <h7> {{ shelter.phoneNumber }} </h7>
+  <div ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'" class="fx-rotate-up-left fx-stagger-245">
+  <h4> {{ shelter.shelterName }}  </h4>
+  <h6> {{ shelter.address }} </h6>
+  <a> {{ shelter.phoneNumber }} </a>
   <h7> {{ shelter.details /100 | currency  }} </h7>
-  </li>
+  </div>
 
 
 <!--   <a href="#/shorten">Go to Shorten</a>

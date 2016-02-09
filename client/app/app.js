@@ -2,6 +2,8 @@ angular.module('ericMVP', [
   'ericMVP.home',
   'ericMVP.homeFactory',
   'ngOrderObjectBy',
+  'ng-fx',
+  'ngAnimate',
   'ui.router'])
 
 .config(function ( $httpProvider, $stateProvider, $urlRouterProvider) {
