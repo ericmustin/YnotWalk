@@ -47,6 +47,13 @@ angular.module('ericMVP.newYorkFactory', [])
    
   };
 
+data.delivery = function(obj) {
+  console.log('sending delivery');
+  return $http.post('/postmatesDelivery', obj).then(function(resp) {
+    console.log(resp);
+    data.response = "You Made A Delivery!";
+  });
+};
 
 data.postmatesController = function(Single) {
   for(var key in data.sheltersObj) {

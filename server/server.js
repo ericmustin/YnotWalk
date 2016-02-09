@@ -40,6 +40,17 @@ helpers.getData(req,function(data) {
 
 });
 
+app.post('/postmatesDelivery', function(req,res) {
+
+  helpers.makeDelivery(req,function(data) {
+    console.log("request body looks like: ", req.body);
+  res.send({
+    data:data
+      });
+  });
+  
+});
+
 app.set('port', (process.env.PORT || 8000));
 
 module.exports = app;

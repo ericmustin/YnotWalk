@@ -23,7 +23,23 @@ var getData = function(req,cb) {
       cb(body)
     });
 };
+var makeDelivery = function(req,cb) {
+  console.log(req.body);
+  var headers = {
+    'Authorization': apiKey.auth,
+  };
 
+  var options =  {
+    url: apiKey.deliveryURL,
+    method: 'POST',
+    headers: headers,
+    form:  req.body
+  };
+  request.post(options, function(err, response,body) {      
+      cb(body)
+    });
+};
 module.exports = {
-  getData: getData
+  getData: getData,
+  makeDelivery: makeDelivery
 };
