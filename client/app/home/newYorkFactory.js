@@ -61,8 +61,13 @@ data.postmatesController = function(Single) {
         console.log(keys);
         console.log(data.sheltersObj);
       data.sheltersObj[keys].details = responses[keys].fee;
+      data.sheltersObj[keys].kind = responses[keys].kind;
     }
+    else {
+      data.sheltersObj[keys].details = '5000';
+      }
     }
+    
     // console.log('got all back', responses, null, 2);
   });
 }

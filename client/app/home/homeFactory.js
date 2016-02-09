@@ -60,7 +60,7 @@ data.postmatesController = function(Single) {
     postmates(Single,data.sheltersObj[key].address);
   }
 
-  $q.all(requests).then(function(){
+    $q.all(requests).then(function(){
     for(var keys in responses) {
       console.log(responses[keys]);
       if(responses[keys].kind !== 'error') {
@@ -68,7 +68,11 @@ data.postmatesController = function(Single) {
         console.log(keys);
         console.log(data.sheltersObj);
       data.sheltersObj[keys].details = responses[keys].fee;
+      data.sheltersObj[keys].kind = responses[keys].kind;
     }
+    else {
+      data.sheltersObj[keys].details = '5000';
+      }
     }
     // console.log('got all back', responses, null, 2);
   });

@@ -5,11 +5,12 @@ angular.module('ericMVP.newYork', [])
 
   $scope.postmateData;
   $scope.startAddress;
-  
-$scope.sheltersObj = DataNewYork.sheltersObj;
+  $scope.sheltersObj = DataNewYork.sheltersObj;
+
 
   $scope.sendFunction = function() {
     DataNewYork.postmatesController($scope.startAddress);
+    $scope.sheltersObj = DataNewYork.sheltersObj;
     // Data.postmates($scope.startAddress,$scope.sheltersObj[key].address).then(function(info) {
     // $scope.sheltersObj[key].details = JSON.parse(info.data.data);
     // $scope.sheltersObj[key].fee = $scope.sheltersObj[key].details.fee;
