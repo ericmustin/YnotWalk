@@ -10,7 +10,7 @@
 
 
   <div ui-view></div>
-  <div ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'" class="fx-rotate-up-left fx-stagger-245" ng-click="sendDelivery(shelter.shelterName, shelter.address, shelter.phoneNumber)">
+  <div ng-repeat="shelter in sheltersObj | orderObjectBy: 'details'" class="fx-rotate-up-left fx-stagger-245" ng-click="sendDelivery(shelter.shelterName, shelter.address, shelter.phoneNumber)" class="fx-fade-up fx-ease-sine">>
   <h4> {{ shelter.shelterName }}  </h4>
   <h6> {{ shelter.address }} </h6>
   <a> {{ shelter.phoneNumber }} </a>

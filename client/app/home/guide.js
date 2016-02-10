@@ -16,7 +16,7 @@ $scope.tips =['Food: Every shelter has their own rules, so call ahead, but gener
     });
     $scope.tips = newTips;
 
-    }, 3000);
+    }, 100);
 
 
 });
